@@ -33,7 +33,7 @@ The goal of this project is to prepare data for **customer churn prediction**. W
     
 - The age distribution is quite even, but some ages look too frequent (synthetic data sign).
     
-![[Pasted image 20250820210024.png]]
+![Age Distribution](data/agedistribution.png)
 ### 2.2 Gender Distribution
 
 - Gender is almost equal (balanced).
