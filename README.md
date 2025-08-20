@@ -65,7 +65,7 @@ The goal of this project is to prepare data for **customer churn prediction**. W
 | 51–65    | 76       | 67      | 64     | 76      |
 | 65+      | 21       | 26      | 12     | 25      |
 
- ![Martial Status and Age group](images/martialage.png)
+ ![Martial Status and Age group](images/martialsage.png)
 
 **Observation:**
 
@@ -95,7 +95,7 @@ The goal of this project is to prepare data for **customer churn prediction**. W
 - Age 65+ mostly has Medium income.
     
 
- ![Income Level and Age group](images/incomeelage.png)
+ ![Income Level and Age group](images/incomelage.png)
  
  ![](images/incomelage2.png)
 
