@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +8,15 @@
         
         
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>My Docs</title>
+        <title>Churn Predictions</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/solarized-dark.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
@@ -20,9 +24,9 @@
     <body class="homepage">
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">My Docs</a>
+                <a class="navbar-brand" href=".">Churn Predictions</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -30,17 +34,17 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem active">
-                                <a href="." class="nav-link">Customer Churn Prediction</a>
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Customer Churn Prediction</a>
                             </li>
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href="Churn_Prediction_az/" class="nav-link">Churn Prediction az</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -61,32 +65,32 @@
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#customer-churn-prediction" class="nav-link">Customer Churn Prediction</a>
+            <li class="nav-item" data-bs-level="1"><a href="#customer-churn-prediction" class="nav-link">Customer Churn Prediction</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#1-introduction" class="nav-link">1. Introduction</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#2-exploratory-data-analysis-eda" class="nav-link">2. Exploratory Data Analysis (EDA)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#1-introduction" class="nav-link">1. Introduction</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#3-data-cleaning-and-preprocessing" class="nav-link">3. Data Cleaning and Preprocessing</a>
+            <li class="nav-item" data-bs-level="2"><a href="#2-exploratory-data-analysis-eda" class="nav-link">2. Exploratory Data Analysis (EDA)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#4-findings-main-observations" class="nav-link">4. Findings (Main observations)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#3-data-cleaning-and-preprocessing" class="nav-link">3. Data Cleaning and Preprocessing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-findings-main-observations" class="nav-link">4. Findings (Main observations)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -97,8 +101,8 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="customer-churn-prediction">Customer Churn Prediction</h1>
-<h2 id="1-introduction">1. Introduction</h2>
+<h1 id="customer-churn-prediction">Customer Churn Prediction<a class="headerlink" href="#customer-churn-prediction" title="Permanent link">#</a></h1>
+<h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">#</a></h2>
 <p>The goal of this project is to prepare data for <strong>customer churn prediction</strong>. We checked the data, did EDA (Exploratory Data Analysis), and suggested preprocessing steps.</p>
 <p><strong>Dataset description:</strong></p>
 <ul>
@@ -127,8 +131,8 @@
 </li>
 </ul>
 <hr />
-<h2 id="2-exploratory-data-analysis-eda">2. Exploratory Data Analysis (EDA)</h2>
-<h3 id="21-age-distribution">2.1 Age Distribution</h3>
+<h2 id="2-exploratory-data-analysis-eda">2. Exploratory Data Analysis (EDA)<a class="headerlink" href="#2-exploratory-data-analysis-eda" title="Permanent link">#</a></h2>
+<h3 id="21-age-distribution">2.1 Age Distribution<a class="headerlink" href="#21-age-distribution" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p>Customer ages are mainly between 18 and 65.</p>
@@ -138,12 +142,12 @@
 </li>
 </ul>
 <p><img alt="Age Distribution" src="images/agedistribution.png" /></p>
-<h3 id="22-gender-distribution">2.2 Gender Distribution</h3>
+<h3 id="22-gender-distribution">2.2 Gender Distribution<a class="headerlink" href="#22-gender-distribution" title="Permanent link">#</a></h3>
 <ul>
 <li>Gender is almost equal (balanced).
 <img alt="Gender Distribution" src="images/genderdistribution.png" /></li>
 </ul>
-<h3 id="23-maritalstatus-vs-incomelevel">2.3 MaritalStatus vs IncomeLevel</h3>
+<h3 id="23-maritalstatus-vs-incomelevel">2.3 MaritalStatus vs IncomeLevel<a class="headerlink" href="#23-maritalstatus-vs-incomelevel" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -187,7 +191,7 @@
 <p>Low income is similar but Single customers are fewer.</p>
 </li>
 </ul>
-<h3 id="24-maritalstatus-vs-agegroup">2.4 MaritalStatus vs AgeGroup</h3>
+<h3 id="24-maritalstatus-vs-agegroup">2.4 MaritalStatus vs AgeGroup<a class="headerlink" href="#24-maritalstatus-vs-agegroup" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -250,7 +254,7 @@
 </li>
 <li></li>
 </ul>
-<h3 id="25-incomelevel-vs-agegroup">2.5 IncomeLevel vs AgeGroup</h3>
+<h3 id="25-incomelevel-vs-agegroup">2.5 IncomeLevel vs AgeGroup<a class="headerlink" href="#25-incomelevel-vs-agegroup" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -313,7 +317,7 @@
 <p><img alt="Income Level and Age group" src="images/incomelage.png" /></p>
 <p><img alt="" src="images/incomelage2.png" /></p>
 <hr />
-<h2 id="3-data-cleaning-and-preprocessing">3. Data Cleaning and Preprocessing</h2>
+<h2 id="3-data-cleaning-and-preprocessing">3. Data Cleaning and Preprocessing<a class="headerlink" href="#3-data-cleaning-and-preprocessing" title="Permanent link">#</a></h2>
 <ul>
 <li>
 <p><strong>Missing values:</strong> None.</p>
@@ -343,7 +347,7 @@
 </li>
 </ul>
 <hr />
-<h2 id="4-findings-main-observations">4. Findings (Main observations)</h2>
+<h2 id="4-findings-main-observations">4. Findings (Main observations)<a class="headerlink" href="#4-findings-main-observations" title="Permanent link">#</a></h2>
 <ul>
 <li>
 <p>Age is strongly related to IncomeLevel and MaritalStatus.</p>
@@ -365,8 +369,7 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
@@ -379,7 +382,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -399,7 +402,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">
@@ -439,6 +442,6 @@
 </html>
 
 <!--
-MkDocs version : 1.5.3
-Build Date UTC : 2025-08-20 19:01:19.563442+00:00
+MkDocs version : 1.6.1
+Build Date UTC : 2025-08-20 19:11:10.162006+00:00
 -->
