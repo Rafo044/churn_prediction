@@ -1,6 +1,6 @@
 
 
-# Customer Churn Prediction – Data Preparation Report
+# Customer Churn Prediction
 
 ## 1. Introduction
 
@@ -127,10 +127,3 @@ The goal of this project is to prepare data for **customer churn prediction**. W
 - Dataset does not fully match real-world patterns but is useful for model preparation.
     
 
----
-
-## 5. Deliverables
-
-- **Report:** PDF
-    
-- **Cleaned dataset:** CSV format with columns: Age, Gender (encoded), MaritalStatus (encoded), IncomeLevel (encoded), AgeGroup (encoded).

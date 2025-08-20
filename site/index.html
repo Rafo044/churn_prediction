@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">My Docs</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#customer-churn-prediction-data-preparation-report" class="nav-link">Customer Churn Prediction – Data Preparation Report</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#1-introduction" class="nav-link">1. Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2-exploratory-data-analysis-eda" class="nav-link">2. Exploratory Data Analysis (EDA)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3-data-cleaning-and-preprocessing" class="nav-link">3. Data Cleaning and Preprocessing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#4-findings-main-observations" class="nav-link">4. Findings (Main observations)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#5-deliverables" class="nav-link">5. Deliverables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="customer-churn-prediction-data-preparation-report">Customer Churn Prediction – Data Preparation Report</h1>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>The goal of this project is to prepare data for <strong>customer churn prediction</strong>. We checked the data, did EDA (Exploratory Data Analysis), and suggested preprocessing steps.</p>
+<p><strong>Dataset description:</strong></p>
+<ul>
+<li>
+<p><strong>1000 rows</strong></p>
+</li>
+<li>
+<p><strong>5 columns:</strong></p>
+<ul>
+<li>
+<p><strong>CustomerID</strong> – unique ID for each customer</p>
+</li>
+<li>
+<p><strong>Age</strong> – customer age (18–65)</p>
+</li>
+<li>
+<p><strong>Gender</strong> – M or F</p>
+</li>
+<li>
+<p><strong>MaritalStatus</strong> – Single, Married, Divorced, Widowed</p>
+</li>
+<li>
+<p><strong>IncomeLevel</strong> – Low, Medium, High</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="2-exploratory-data-analysis-eda">2. Exploratory Data Analysis (EDA)</h2>
+<h3 id="21-age-distribution">2.1 Age Distribution</h3>
+<ul>
+<li>
+<p>Customer ages are mainly between 18 and 65.</p>
+</li>
+<li>
+<p>The age distribution is quite even, but some ages look too frequent (synthetic data sign).</p>
+</li>
+</ul>
+<p>![[Pasted image 20250820210024.png]]</p>
+<h3 id="22-gender-distribution">2.2 Gender Distribution</h3>
+<ul>
+<li>Gender is almost equal (balanced).</li>
+</ul>
+<p>![[Pasted image 20250820210056.png]]</p>
+<h3 id="23-maritalstatus-vs-incomelevel">2.3 MaritalStatus vs IncomeLevel</h3>
+<table>
+<thead>
+<tr>
+<th>IncomeLevel</th>
+<th>Divorced</th>
+<th>Married</th>
+<th>Single</th>
+<th>Widowed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High</td>
+<td>82</td>
+<td>98</td>
+<td>75</td>
+<td>94</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>87</td>
+<td>86</td>
+<td>62</td>
+<td>90</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>79</td>
+<td>77</td>
+<td>78</td>
+<td>92</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observation:</strong></p>
+<ul>
+<li>
+<p>High and Medium income are evenly spread in all marital groups.</p>
+</li>
+<li>
+<p>Low income is similar but Single customers are fewer.</p>
+</li>
+</ul>
+<h3 id="24-maritalstatus-vs-agegroup">2.4 MaritalStatus vs AgeGroup</h3>
+<table>
+<thead>
+<tr>
+<th>AgeGroup</th>
+<th>Divorced</th>
+<th>Married</th>
+<th>Single</th>
+<th>Widowed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;18</td>
+<td>4</td>
+<td>8</td>
+<td>7</td>
+<td>5</td>
+</tr>
+<tr>
+<td>18–35</td>
+<td>80</td>
+<td>84</td>
+<td>69</td>
+<td>93</td>
+</tr>
+<tr>
+<td>36–50</td>
+<td>67</td>
+<td>76</td>
+<td>63</td>
+<td>77</td>
+</tr>
+<tr>
+<td>51–65</td>
+<td>76</td>
+<td>67</td>
+<td>64</td>
+<td>76</td>
+</tr>
+<tr>
+<td>65+</td>
+<td>21</td>
+<td>26</td>
+<td>12</td>
+<td>25</td>
+</tr>
+<tr>
+<td><strong>Observation:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Age group 18–35 is the largest in all marital groups.</p>
+</li>
+<li>
+<p>Widowed is more common in young people (synthetic data).</p>
+</li>
+<li>
+<p>Age 65+ has mostly Married and Widowed.</p>
+</li>
+</ul>
+<p>![[Pasted image 20250820210137.png]]</p>
+<h3 id="25-incomelevel-vs-agegroup">2.5 IncomeLevel vs AgeGroup</h3>
+<table>
+<thead>
+<tr>
+<th>AgeGroup</th>
+<th>High</th>
+<th>Low</th>
+<th>Medium</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;18</td>
+<td>4</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr>
+<td>18–35</td>
+<td>121</td>
+<td>105</td>
+<td>100</td>
+</tr>
+<tr>
+<td>36–50</td>
+<td>94</td>
+<td>98</td>
+<td>91</td>
+</tr>
+<tr>
+<td>51–65</td>
+<td>105</td>
+<td>86</td>
+<td>92</td>
+</tr>
+<tr>
+<td>65+</td>
+<td>25</td>
+<td>26</td>
+<td>33</td>
+</tr>
+<tr>
+<td><strong>Observation:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>High income is mainly 18–35 (121 people).</p>
+</li>
+<li>
+<p>Low and Medium incomes are balanced across ages.</p>
+</li>
+<li>
+<p>Age 65+ mostly has Medium income.</p>
+</li>
+</ul>
+<p>![[Pasted image 20250820210153.png]]
+![[Pasted image 20250820210226.png]]</p>
+<hr />
+<h2 id="3-data-cleaning-and-preprocessing">3. Data Cleaning and Preprocessing</h2>
+<ul>
+<li>
+<p><strong>Missing values:</strong> None.</p>
+</li>
+<li>
+<p><strong>Outliers:</strong> Age has no extreme values (range 18–65).</p>
+</li>
+<li>
+<p><strong>Feature Engineering:</strong> Added <code>AgeGroup</code> (&lt;18, 18–35, 36–50, 51–65, 65+).</p>
+</li>
+<li>
+<p><strong>Encoding:</strong></p>
+<ul>
+<li>
+<p>Gender → Binary (M=1, F=0)</p>
+</li>
+<li>
+<p>MaritalStatus, IncomeLevel, AgeGroup → One-hot encoding</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Normalization:</strong> Age can be scaled using StandardScaler or MinMaxScaler.</p>
+</li>
+<li>
+<p><strong>Redundant Columns:</strong> CustomerID is not needed for the model.</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-findings-main-observations">4. Findings (Main observations)</h2>
+<ul>
+<li>
+<p>Age is strongly related to IncomeLevel and MaritalStatus.</p>
+</li>
+<li>
+<p>Age 18–35 dominates both marital status and high income groups.</p>
+</li>
+<li>
+<p>Widowed in young people and many young high-income customers are signs of synthetic data.</p>
+</li>
+<li>
+<p>Dataset does not fully match real-world patterns but is useful for model preparation.</p>
+</li>
+</ul>
+<hr />
+<h2 id="5-deliverables">5. Deliverables</h2>
+<ul>
+<li>
+<p><strong>Report:</strong> PDF</p>
+</li>
+<li>
+<p><strong>Cleaned dataset:</strong> CSV format with columns: Age, Gender (encoded), MaritalStatus (encoded), IncomeLevel (encoded), AgeGroup (encoded).</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2025-08-20 17:30:56.733987+00:00
+-->
