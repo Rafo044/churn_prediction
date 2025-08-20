@@ -37,8 +37,8 @@ The goal of this project is to prepare data for **customer churn prediction**. W
 ### 2.2 Gender Distribution
 
 - Gender is almost equal (balanced).
-    
-![[Pasted image 20250820210056.png]]
+![Gender Distribution](images/genderdistribution.png)
+  
 ### 2.3 MaritalStatus vs IncomeLevel
 
 | IncomeLevel | Divorced | Married | Single | Widowed |
@@ -64,6 +64,9 @@ The goal of this project is to prepare data for **customer churn prediction**. W
 | 36–50    | 67       | 76      | 63     | 77      |
 | 51–65    | 76       | 67      | 64     | 76      |
 | 65+      | 21       | 26      | 12     | 25      |
+
+ ![Martial Status and Age group](images/martialage.png)
+
 **Observation:**
 
 - Age group 18–35 is the largest in all marital groups.
@@ -71,8 +74,9 @@ The goal of this project is to prepare data for **customer churn prediction**. W
 - Widowed is more common in young people (synthetic data).
     
 - Age 65+ has mostly Married and Widowed.
+
+- 
     
-![[Pasted image 20250820210137.png]]
 ### 2.5 IncomeLevel vs AgeGroup
 
 | AgeGroup | High | Low | Medium |
@@ -90,8 +94,10 @@ The goal of this project is to prepare data for **customer churn prediction**. W
     
 - Age 65+ mostly has Medium income.
     
-![[Pasted image 20250820210153.png]]
-![[Pasted image 20250820210226.png]]
+
+ ![Income Level and Age group](images/incomeelage.png)
+ 
+ ![](images/incomelage2.png)
 
 ---
 
