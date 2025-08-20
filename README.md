@@ -65,7 +65,7 @@ The goal of this project is to prepare data for **customer churn prediction**. W
 | 51–65    | 76       | 67      | 64     | 76      |
 | 65+      | 21       | 26      | 12     | 25      |
 
- ![Martial Status and Age group](images/martialsage.png)
+ ![Martial Status and Age group](images/maritalsage.png)
 
 **Observation:**
 
