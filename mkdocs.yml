@@ -1,4 +1,13 @@
-site_name: My Docs
-extends: mkdocs
+site_name: Churn Predictions
+
+theme:
+    name: solarized-dark
+
+markdown_extensions:
+    - toc:
+        permalink: '#'
+
+plugins:
+    - search
 
 hljs_style: solarized-dark
