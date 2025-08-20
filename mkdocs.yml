@@ -1,7 +1,7 @@
 site_name: Churn Predictions
 
 theme:
-    name: solarized-dark
+    name: solar
 
 markdown_extensions:
     - toc:
@@ -10,4 +10,4 @@ markdown_extensions:
 plugins:
     - search
 
-hljs_style: solarized-dark
+
